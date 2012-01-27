@@ -1,13 +1,13 @@
-class Spree::Admin::ReviewsController < Spree::Admin::ResourceController
-  helper Spree::ReviewsHelper
+class Admin::ReviewsController < Admin::ResourceController
+  helper ReviewsHelper
 
   def index
-    @unapproved_reviews = Spree::Review.not_approved.find(:all, :order => "created_at DESC")
-    @approved_reviews   = Spree::Review.approved.find(:all, :order => "created_at DESC")
+    @unapproved_reviews = Review.not_approved.find(:all, :order => "created_at DESC")
+    @approved_reviews   = Review.approved.find(:all, :order => "created_at DESC")
   end
 
   def approve
-    r = Spree::Review.find(params[:id])
+    r = Review.find(params[:id])
 
     if r.update_attribute(:approved, true)
        r.product.recalculate_rating

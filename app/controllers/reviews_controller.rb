@@ -1,14 +1,14 @@
-class Spree::ReviewsController < Spree::BaseController
-  helper Spree::BaseHelper
+class ReviewsController < BaseController
+  helper BaseHelper
   before_filter :load_product, :only => [:index, :new, :create]
   rescue_from ActiveRecord::RecordNotFound, :with => :render_404
 
   def index
-    @approved_reviews = Spree::Review.approved.find_all_by_product_id(@product.id)
+    @approved_reviews = Review.approved.find_all_by_product_id(@product.id)
   end
 
   def new
-    @review = Spree::Review.new(:product => @product)
+    @review = Review.new(:product => @product)
     authorize! :new, @review
   end
 
@@ -16,7 +16,7 @@ class Spree::ReviewsController < Spree::BaseController
   def create
     params[:review][:rating].sub!(/\s*stars/,'') unless params[:review][:rating].blank?
 
-    @review = Spree::Review.new(params[:review])
+    @review = Review.new(params[:review])
     @review.product = @product
     @review.user = current_user if user_signed_in?
     @review.ip_address = request.remote_ip
@@ -37,7 +37,7 @@ class Spree::ReviewsController < Spree::BaseController
   private
 
     def load_product
-      @product = Spree::Product.find_by_permalink!(params[:product_id])
+      @product = Product.find_by_permalink!(params[:product_id])
     end
 
 end

@@ -1,13 +1,13 @@
 class CreateReviews < ActiveRecord::Migration
   def self.up
     create_table :reviews do |t|
-      t.integer :product_id
-      t.string  :name
-      t.string  :location
+      t.string  :name, :location
       t.integer :rating
-      t.text    :title
-      t.text    :review
+      t.text :title, :review
       t.boolean :approved, :default => false
+      
+      t.references :product, :user
+      
       t.timestamps
     end
   end

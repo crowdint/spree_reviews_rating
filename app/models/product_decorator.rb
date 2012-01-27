@@ -1,5 +1,4 @@
-# Add access to reviews/ratings to the product model
-Spree::Product.class_eval do
+Product.class_eval do
   has_many :reviews
 
   def get_stars

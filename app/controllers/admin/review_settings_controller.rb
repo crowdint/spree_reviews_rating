@@ -1,4 +1,4 @@
-class Spree::Admin::ReviewSettingsController < Spree::Admin::BaseController
+class Admin::ReviewSettingsController < Admin::BaseController
   def update
     # workaround for unset checkbox behaviour
     params[:preferences][:include_unapproved_reviews] = false if params[:preferences][:include_unapproved_reviews].blank?

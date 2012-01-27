@@ -1,3 +1,3 @@
-Spree::ProductsController.class_eval do
-  helper Spree::ReviewsHelper
+ProductsController.class_eval do
+  helper ReviewsHelper
 end

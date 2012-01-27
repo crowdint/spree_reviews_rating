@@ -1,4 +1,4 @@
-<% render 'spree/admin/shared/product_sub_menu' %>
+<% render 'admin/shared/product_sub_menu' %>
 <h1><%= t('review_management_description') %></h1>
 
 <% for reviews in [["Unapproved", @unapproved_reviews], ["Approved", @approved_reviews]] %>
@@ -6,11 +6,11 @@
 
   <table cellspacing=6 class="index">
     <tr>
-      <th><%= Spree::Review.human_attribute_name(:created_at) %></th>
-      <th><%= Spree::Review.human_attribute_name(:user) %></th>
-      <th><%= Spree::Review.human_attribute_name(:rating) %></th>
-      <th><%= Spree::Review.human_attribute_name(:title) %> / <%= t('product') %></th>
-      <th><%= Spree::Review.human_attribute_name(:review) %></th>
+      <th><%= Review.human_attribute_name(:created_at) %></th>
+      <th><%= Review.human_attribute_name(:user) %></th>
+      <th><%= Review.human_attribute_name(:rating) %></th>
+      <th><%= Review.human_attribute_name(:title) %> / <%= t('product') %></th>
+      <th><%= Review.human_attribute_name(:review) %></th>
       <th></th>
     </tr>
 
@@ -21,7 +21,7 @@
       </td>
       <td>
         <p><%= review.name %> / <%= review.user_id ? link_to(review.user.try(:email), [:admin, review.user]) : t(:guest) %></p>
-        <p><%= Spree::Review.human_attribute_name(:ip_address) %>: <%= review.ip_address ? link_to(review.ip_address, "http://whois.domaintools.com/#{review.ip_address}") : '-' %></p>
+        <p><%= Review.human_attribute_name(:ip_address) %>: <%= review.ip_address ? link_to(review.ip_address, "http://whois.domaintools.com/#{review.ip_address}") : '-' %></p>
       </td>
       <td>
         <%= txt_stars(review.rating) %>

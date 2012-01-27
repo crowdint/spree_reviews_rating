@@ -1,2 +1,2 @@
-module Spree::Admin::FeedbackReviewsHelper
+module Admin::FeedbackReviewsHelper
 end

@@ -1,5 +1,5 @@
 module Spree
   module Reviews
-    Config = Spree::ReviewsConfiguration.new
+    Config = ReviewsConfiguration.new
   end
 end
