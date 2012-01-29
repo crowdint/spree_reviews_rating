@@ -1,4 +1,4 @@
-Spree::Core::Engine.routes.append do
+Rails.application.routes.draw do
   namespace :admin do
     resources :feedback_reviews
     resources :reviews do

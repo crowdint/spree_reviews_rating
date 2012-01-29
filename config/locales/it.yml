@@ -1,0 +1,74 @@
+it:
+  activerecord:
+    attributes:
+      review:
+        name: Nome
+        title: Titolo
+        review: Contenuto
+        rating: Voto
+        created_at: Data
+        ip_address: IP
+        user: Utente
+    models:
+      review:
+        one: Recensione
+        other: "%{count} recensioni"
+
+  approve: Approvare
+  Approved_reviews: Approvata
+  approved_text: Unlocked comments will be published within 1-2 business days.
+  are_you_sure_review: Sei sicuro di eliminare la recensione ?
+  average_customer_rating: Voto medio
+  back_reviews: Torna alle recensioni
+  based_upon: basato su
+  reviews: recensioni
+  by: da
+  date_: Data
+  edited_version: 'Edited version'
+  editing_review_for: 'Editing review for'
+  error_approve_review: Errore durante l'approvazione della recensione
+  feedback: Feedback
+  feedback_review_for: "Recensione: '%{review}'"
+  for: per
+  from: da
+  guideline_text: We reserve the right not to post opinions unrelated to your product
+  info_approve_review: Review approved
+  leave_us_a_review_for: Please leave us a review and a rating for our
+  original_version: 'Original version'
+  out_of_5: "out of 5"
+  rating: voto
+  review: Recensione
+  review_content: Contenuto
+  review_guidelines: Review Guidelines
+  review_management: Recensioni
+  review_management_description: Manage the user-submitted reviews
+  review_name: Your Name
+  review_successfully_submitted: Review was successfully submitted
+  review_not_submitted: Review was not submitted
+  review_title: Title
+  spree_reviews:
+    review_settings: Impostazione recensioni
+    manage_review_settings: Control the display of reviews
+    preview_size: Size of the review snippets
+    include_unapproved: Include unapproved reviews in listings
+    show_email: Mostra indirizzo email
+    feedback_rating: Rate feedback
+    require_login: Devi essere loggato per procedere
+    your_name: Il tuo nome
+    your_location: La tua posizione
+  star:
+    one: "1"
+    other: "%{count}"
+  stars: Stelle
+  submit_your_review: Conferma
+  submitted_on: Submitted on
+  terms_text: All opinions must comply with our terms and conditions
+  terms_and_conditions: Terms & Conditions
+  the_fine_print: The fine print
+  Unapproved_reviews: Non approvata
+  voice:
+    one: "1 voice"
+    other: "%{count} voices"
+  write_your_own_review: Write your own review
+  was_this_review_helpful: "Was this review helpful to you?"
+  you_must_enter_value_for_rating: "You must enter a value for rating."

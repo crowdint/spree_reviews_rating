@@ -1,4 +1,4 @@
-class FeedbackReviewsController < BaseController
+class FeedbackReviewsController < Spree::BaseController
   helper Spree::BaseHelper
 
   def create

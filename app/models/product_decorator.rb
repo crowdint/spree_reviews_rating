@@ -2,7 +2,7 @@ Product.class_eval do
   has_many :reviews
 
   def get_stars
-    [avg_rating.round, reviews_count]
+    {:star => avg_rating.round, :rcount => reviews_count}
   end
 
   def recalculate_rating

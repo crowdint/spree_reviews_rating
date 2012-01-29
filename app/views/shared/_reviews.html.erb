@@ -4,7 +4,7 @@
   <% for review in @product.reviews.approval_filter %>
     <%= render :partial => 'shared/review', :locals => {:review => review} %>
   <% end %>
-  <% if !Reviews::Config[:require_login] || current_user %>
+  <% if !Spree::Config[:require_login] || current_user %>
     <%= link_to t('write_your_own_review'), new_product_review_path(@product), :class => "button",
                 :rel => "nofollow,noindex" %>
   <% end %>

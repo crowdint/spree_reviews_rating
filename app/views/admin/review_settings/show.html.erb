@@ -5,23 +5,23 @@
 <table>
   <tr>
     <th scope="row"><%= t("spree_reviews.include_unapproved") %>:</th>
-    <td><%= Reviews::Config[:include_unapproved_reviews] ? t('yes') : t('no') %></td>
+    <td><%= Spree::Config[:include_unapproved_reviews] ? t('yes') : t('no') %></td>
   </tr>
   <tr>
     <th scope="row"><%= t("spree_reviews.feedback_rating") %>:</th>
-    <td><%= Reviews::Config[:feedback_rating] ? t('yes') : t('no') %></td>
+    <td><%= Spree::Config[:feedback_rating] ? t('yes') : t('no') %></td>
   </tr>
   <tr>
     <th scope="row"><%= t("spree_reviews.show_email") %>:</th>
-    <td><%= Reviews::Config[:show_email] ? t('yes') : t('no') %></td>
+    <td><%= Spree::Config[:show_email] ? t('yes') : t('no') %></td>
   </tr>
   <tr>
     <th scope="row"><%= t("spree_reviews.require_login") %>:</th>
-    <td><%= Reviews::Config[:require_login] ? t('yes') : t('no') %></td>
+    <td><%= Spree::Config[:require_login] ? t('yes') : t('no') %></td>
   </tr>
   <tr>
     <th scope="row"><%= t("spree_reviews.preview_size") %>:</th>
-    <td><%= Reviews::Config[:preview_size] %></td>
+    <td><%= Spree::Config[:preview_size] %></td>
   </tr>
 </table>
 

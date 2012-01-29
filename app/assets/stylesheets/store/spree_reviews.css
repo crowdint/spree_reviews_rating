@@ -1,7 +1,6 @@
-/*
- *= require jquery-star-rating
-*/
-
+#reviews h6 {
+	font-size: 16pt;
+}
 #reviews div.header {
   font-size: 12pt;
   font-weight: bold;

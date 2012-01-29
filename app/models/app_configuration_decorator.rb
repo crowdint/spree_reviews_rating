@@ -1,4 +1,4 @@
-class ReviewsConfiguration < Preferences::Configuration
+AppConfiguration.class_eval do
   # include non-approved reviews in (public) listings
   preference :include_unapproved_reviews, :boolean, :default => false
 

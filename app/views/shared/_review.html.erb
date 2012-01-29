@@ -3,7 +3,7 @@
     <%= render :partial => "reviews/stars", :locals => {:stars => review.rating} %>
   </span>
   <meta itemprop="reviewRating" content="<%= review.rating %>" />
-  <% if Reviews::Config[:show_email] && review.user %>
+  <% if Spree::Config[:show_email] && review.user %>
     <span itemprop="author"><%= review.user.email %></span>
   <% else %>
     <span itemprop="author"><%= review.name %></span>
@@ -14,7 +14,7 @@
   <div itemprop="reviewBody">
     <%= simple_format(review.review) %>
   </div>
-  <% if Reviews::Config[:feedback_rating] && (!Reviews::Config[:require_login] || current_user) %>
+  <% if Spree::Config[:feedback_rating] && (!Spree::Config[:require_login] || current_user) %>
   <div class="feedback_review" id="feedback_review_<%= review.id %>">
     <%= render :partial => "feedback_reviews/form", :locals => {:review => review} %>
   </div>

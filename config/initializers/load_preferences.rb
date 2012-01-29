@@ -1,5 +1,5 @@
-module Spree
-  module Reviews
-    Config = ReviewsConfiguration.new
-  end
-end
+#module Spree
+#  module Reviews
+#    Config = ReviewsConfiguration.new
+#  end
+#end

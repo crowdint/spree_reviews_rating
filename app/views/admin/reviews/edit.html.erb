@@ -9,7 +9,7 @@
 
 <h2><%= t(:edited_version) %></h2>
 
-<% form_for([:admin, @review]) do |f| %>
+<% semantic_form_for([:admin, @review]) do |f| %>
   <%= render :partial => f,
              :locals  => { :button_name => t(:update) } %>
 <% end %>
