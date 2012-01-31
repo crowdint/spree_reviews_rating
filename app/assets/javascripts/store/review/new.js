@@ -4,6 +4,7 @@ $('.cancel-review').click(function (event) {
 	$(".ratings").show();
 	$('#new_review').html('');
 });
+
 $('.button-submit').click(function (event) {
 	event.preventDefault();
 	$.ajax({
