@@ -7,6 +7,13 @@ class ReviewsController < Spree::BaseController
   def index
     @approved_reviews = Review.approved.find_all_by_product_id(@product.id)
   end
+  
+  def all_list
+    @approved_reviews = Review.approved.order("created_at DESC")
+    respond_to do |f|
+      f.html
+    end
+  end
 
   def new
     @review = Review.new(:product => @product)

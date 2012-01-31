@@ -1,0 +1,42 @@
+<% content_for :sidebar do %>
+<div data-hook="homepage_sidebar_navigation">
+	<%= render 'shared/taxonomies' %>
+</div>
+<% end %>
+
+<div data-hook="homepage_reviews">
+	<% paginated_reviews ||= @approved_reviews %>
+	<% if @approved_reviews.empty? %>
+	  <%= t(:no_reviews_found) %>
+	<% end %>
+
+	<% if @approved_reviews.any? %>
+	<ul id="reviews" class="review-listing" data-hook>
+	  <% @approved_reviews.each do |review| %>
+	      <li id="reviews_<%= review.id %>" data-hook="reviews_list_item">
+	        <%= review.name %><span class="attribution"><%= t('submitted_on') %> <strong itemprop="datePublished"><%= l review.created_at.to_date %></strong></span>
+			<div id="new-star" data-rating="<%= review.rating %>"></div>
+			<script type="text/javascript">
+			<!--//
+			jQuery(document).ready(function() {
+				$("#new-star").raty({
+					start: <%= review.rating %>,
+					width: 180,
+					path: '/assets/',
+					readOnly: true
+				});
+			});
+			//-->
+			</script>
+	        <span class="review-review"><%= raw review.review %></span>
+	      </li>
+	  <% end %>
+	</ul>
+	<% end %>
+
+	<hr class="space" />
+
+	<% if paginated_reviews.respond_to?(:num_pages)
+	%><%= paginate paginated_reviews %><% end %>
+	<hr class="space" />
+</div>

@@ -18,5 +18,9 @@ Rails.application.routes.draw do
       end
     end
   end
+  #resources :reviews
+  
   match "/reviews/:review_id/feedback(.:format)" => "feedback_reviews#create", :via => :post, :as => "feedback_review"
+  match "/reviews/all_list", :to => "reviews#all_list", :as => :all_reviews
+  
 end
