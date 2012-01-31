@@ -423,7 +423,7 @@
 		click:			undefined,
 		half:			false,
 		halfShow:		true,
-		hintList:		['bad', 'poor', 'regular', 'good', 'gorgeous'],
+		hintList:		['1', '2', '3', '4', '5'],
 		iconRange:		undefined,
 		noRatedMsg:		'not rated yet',
 		number:			5,

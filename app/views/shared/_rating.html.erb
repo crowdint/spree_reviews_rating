@@ -3,11 +3,6 @@ if !stars.blank? %>
 <div class="ratings">
   <p><%= t('average_customer_rating') %>: </p>
   <div id="star" data-rating="<%= stars[:star] || 0 %>"></div>
-  <!--<p>
-    <span title="<%# txt_stars(stars[0]) %>">
-      <%# render :partial => "reviews/stars", :locals => {:stars => stars[0]} %>
-    </span>
-  </p>-->
   <p>(<%= t('based_upon') %> <%= stars[:rcount] %> <%= t('reviews') %>)</p>
   <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
     <meta itemprop="ratingValue" content="<%= stars[:star] %>" />
@@ -20,6 +15,7 @@ if !stars.blank? %>
 	jQuery(document).ready(function() {
 		$("#star").raty({
 		  readOnly: true,
+		  start: <%= stars[:star] %>,
 		  half:  true,
 		  width: 180,
 		  path: '/assets/'

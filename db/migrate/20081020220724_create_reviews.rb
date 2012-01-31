@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.string  :name, :location
       t.integer :rating
-      t.text :title, :review
+      t.text :review
       t.boolean :approved, :default => false
       
       t.references :product, :user

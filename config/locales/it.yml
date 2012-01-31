@@ -13,6 +13,14 @@ it:
       review:
         one: Recensione
         other: "%{count} recensioni"
+  time:
+    formats:
+       default: "%a %d %b %Y, %H:%M:%S %z"
+       short: "%d %b %H:%M"
+       long: "%d %B %Y %H:%M"
+       review: "%a %d.%m.%Y"
+       hours: "%H:%M"
+       dow: "%A"
 
   approve: Approvare
   Approved_reviews: Approvata
@@ -33,9 +41,9 @@ it:
   from: da
   guideline_text: We reserve the right not to post opinions unrelated to your product
   info_approve_review: Review approved
-  leave_us_a_review_for: Please leave us a review and a rating for our
+  leave_us_a_review: Lasciaci un commento e un voto
   original_version: 'Original version'
-  out_of_5: "out of 5"
+  out_of_5: "su 5"
   rating: voto
   review: Recensione
   review_content: Contenuto
@@ -43,8 +51,8 @@ it:
   review_management: Recensioni
   review_management_description: Manage the user-submitted reviews
   review_name: Your Name
-  review_successfully_submitted: Review was successfully submitted
-  review_not_submitted: Review was not submitted
+  review_successfully_submitted: La recensione è stata inviata correttamente
+  review_not_submitted: Non è stato possibile salvare la recensione
   review_title: Title
   spree_reviews:
     review_settings: Impostazione recensioni
@@ -61,7 +69,7 @@ it:
     other: "%{count}"
   stars: Stelle
   submit_your_review: Conferma
-  submitted_on: Submitted on
+  submitted_on: Inviata il
   terms_text: All opinions must comply with our terms and conditions
   terms_and_conditions: Terms & Conditions
   the_fine_print: The fine print
@@ -69,6 +77,7 @@ it:
   voice:
     one: "1 voice"
     other: "%{count} voices"
-  write_your_own_review: Write your own review
+  write_your_own_review: Scrivi la tua recensione
+  cancel_your_review: Annulla
   was_this_review_helpful: "Was this review helpful to you?"
   you_must_enter_value_for_rating: "You must enter a value for rating."

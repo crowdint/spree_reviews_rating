@@ -1,11 +1,12 @@
 <div id="reviews">
-  <h6 class="product-section-title"><%= t(:reviews) %></h6>
-  <%= render :partial => 'shared/rating', :locals => {:product => @product, :review => 0} %>
-  <% for review in @product.reviews.approval_filter %>
+  <h6 class="product-section-title"><%= t(:reviews).titleize %></h6>
+  <%= render :partial => 'shared/rating', :locals => {:product => @product} %>
+  <% for review in @product.reviews.approved.limit(3) %>
     <%= render :partial => 'shared/review', :locals => {:review => review} %>
   <% end %>
   <% if !Spree::Config[:require_login] || current_user %>
-    <%= link_to t('write_your_own_review'), new_product_review_path(@product), :class => "button",
-                :rel => "nofollow,noindex" %>
+    <%= link_to(t('write_your_own_review'), new_product_review_path(@product), :class => "button-review", :rel => "nofollow,noindex") %>
   <% end %>
+<div id="new_review"></div>
 </div>
+<%= javascript_include_tag 'store/review/index.js' %>

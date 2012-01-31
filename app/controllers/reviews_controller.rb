@@ -11,16 +11,17 @@ class ReviewsController < Spree::BaseController
   def new
     @review = Review.new(:product => @product)
     authorize! :new, @review
+    render :layout => false
   end
 
   # save if all ok
   def create
-    params[:review][:rating].sub!(/\s*stars/,'') unless params[:review][:rating].blank?
+    #params[:review][:rating].sub!(/\s*stars/,'') unless params[:review][:rating].blank?
 
     @review = Review.new(params[:review])
     @review.product = @product
     @review.user = current_user if user_signed_in?
-    @review.ip_address = request.remote_ip
+    @review.location = request.remote_ip
 
     authorize! :create, @review
 

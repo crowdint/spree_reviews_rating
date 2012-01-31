@@ -1,13 +1,16 @@
-<% if defined? edit_enabled 
-    state = "" 
-    name  = "review[rating]" 
-  else  
-    state = 'disabled="disabled"' 
-    name  = defined?(review).nil? ? Time.now.tv_usec.to_s : "review_#{review}" 
-  end %>
-<% for i in 1..NB_STARS %>
-  <input name="<%= name %>" 
-         type="radio" class="star" 
-         value="<%= pluralize(i, 'stars') %>" <%= state %> 
-         <%= "checked=\"checked\"" if i==stars  %> />
-<% end %>
+<div id="new-star" data-rating="0"></div>
+<script type="text/javascript">
+<!--//
+jQuery(document).ready(function() {
+	$("#new-star").raty({
+		cancel: true,
+		half:  true,
+		width: 180,
+		path: '/assets/',
+		click: function(score, evt) {
+			$("#review_rating").val(score);
+		}
+	});
+});
+//-->
+</script>

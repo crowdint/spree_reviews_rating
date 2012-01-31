@@ -3,31 +3,18 @@ Reviews
 
 Straightforward review/rating facility
 
-Please see TODO file
-
 
 Installation
 ------------
-
-To use the last stable release of spree_reviews, add the following to your Gemfile:
-
-    gem 'spree_reviews'
-    
-If you'd rather install from git:
-
-    gem 'spree_reviews', :git => 'git://github.com/damianogiacomello/spree_reviews.git'
-
-Now bundle up with:
-
-    bundle install
-    
-Next, run the rake task that copies the necessary migrations and assets to your project:
-
-    rake spree_reviews:install
-    
-And finish with a migrate:
-
-    rake db:migrate
+1. Add the following to your Gemfile
+<pre>
+  gem 'spree_reviews', :git => 'git://github.com/damianogiacomello/spree_reviews'
+</pre>
+2. Run `bundle install`
+3. To copy and apply migrations run:
+<pre>
+	rake spree_reviews:install:migrations
+</pre>
     
 Now you should be able to boot up your server with:
 
