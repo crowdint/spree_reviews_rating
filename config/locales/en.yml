@@ -23,6 +23,8 @@ en:
       dow: "%A"
 
   approve: Approve
+  on: on
+  stars: stars!
   Approved_reviews: Approved
   approved_text: Unlocked comments will be published within 1-2 business days.
   are_you_sure_review: Are you sure to delete review ?

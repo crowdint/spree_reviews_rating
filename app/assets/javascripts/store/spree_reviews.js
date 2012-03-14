@@ -1,3 +1,4 @@
+//= require store/spree_core
 /*
  * jQuery Raty - A Star Rating Plugin - http://wbotelhos.com/raty
  * ---------------------------------------------------------------------

@@ -1,0 +1,23 @@
+<%= form_for review, :url => product_reviews_path(product), :html => {:id => "reviews_form"}, :remote => true do |f| %>
+	<%= render :partial => "spree/shared/error_messages", :locals => {:target => review} %>
+
+	<div class="s_row_3 clearfix">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="s_row_3 clearfix">
+		<%= f.label :review %>
+		<%= f.text_area :review, :wrap => "virtual", :rows => "8", :cols => "50" %>
+		<p class="s_legend">
+			<span style="color: #FF0000;"><%= t(:note_reviews) %></span> <%= t(:note_review_description) %></p>
+	</div>
+	
+	<div class="s_row_3 clearfix">
+		<%= f.label :rating %>
+		<%= render :partial => "spree/reviews/stars" %>
+		<%= f.hidden_field :rating %>
+	</div>
+	<span class="clear border_ddd"></span>
+	<%= link_to content_tag(:span, t(:continue), :class => "s_text"), "javascript: $('#reviews_form').submit(); ", :class => "s_button_1 s_main_color_bgr" %>
+	<%#= button_tag t('submit_your_review'), :class => "button-submit" %>
+<% end %>

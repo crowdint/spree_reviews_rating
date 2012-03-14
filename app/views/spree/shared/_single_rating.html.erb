@@ -1,0 +1,20 @@
+<% if !review.rating.blank? %>
+<p class="s_rating s_rating_5"><span id="star_s<%= review.id.to_s %>" data-rating="<%= review.rating || 0 %>"></span></p>
+<span class="s_average"><%= review.rating.to_s + " " + t(:on) + " 5 " + t(:stars) %></span>
+<% end %>
+<script type="text/javascript">
+<!--//
+	jQuery(document).ready(function() {
+		$("#star_s<%= review.id.to_s %>").raty({
+		  readOnly: true,
+		  start: <%= review.rating %>,
+		  half:  true,
+		  width: 180,
+		  starHalf: 'star-half.png',
+		  starOff: 'star-off.png',
+	 	  starOn:	'star-on.png',
+		  path: '/assets/'
+		});
+	});
+//-->
+</script>

@@ -1,11 +1,12 @@
-Reviews
+SpreeReviews
 =======
 
 Straightforward review/rating facility
 
 
-Installation
-------------
+Basic Installation
+------------------
+
 1. Add the following to your Gemfile
 <pre>
   gem 'spree_reviews', :git => 'git://github.com/damianogiacomello/spree_reviews'
@@ -13,29 +14,17 @@ Installation
 2. Run `bundle install`
 3. To copy and apply migrations run:
 <pre>
-	rake spree_reviews:install:migrations
+	rails g spree_reviews:install
 </pre>
     
-Now you should be able to boot up your server with:
-
-    rails s  
-    
-    
-That's all!
-
-
 
 Usage
 -----
 
-Action "submit" in "reviews" controller - goes to review entry form
+1. Action "submit" in "reviews" controller - goes to review entry form
 
-Users must be logged in to submit a review
+2. Users must be logged in to submit a review
 
-Three partials:
- - ./app/views/products/_rating.html.erb  -- display number of stars
- - ./app/views/products/_shortrating.html.erb -- shorter version of above
- - ./app/views/products/_review.html.erb  -- display a single review
+3. Administrator can edit and/or approve and/or delete reviews.
 
-Administrator can edit and/or approve and/or delete reviews.
-
+Copyright (c) 2012 [Damiano Giacomello], released under the New BSD License

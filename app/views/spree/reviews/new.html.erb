@@ -1,0 +1,5 @@
+<h2 class="s_title_1"><%= I18n.t('leave_us_a_review') %></h2>
+
+<%= render 'form', { :review => @review, :product => @product } %>
+<%= link_to(t('cancel_your_review'), "#", :class => "cancel-review", :rel => "nofollow,noindex") %>
+<%# render :partial => "reviews/fine_print" %>

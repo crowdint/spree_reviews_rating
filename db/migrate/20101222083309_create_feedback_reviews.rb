@@ -1,6 +1,6 @@
 class CreateFeedbackReviews < ActiveRecord::Migration
   def self.up
-    create_table :feedback_reviews do |t|
+    create_table :spree_feedback_reviews do |t|
       t.integer :rating,    :default => 0
       t.text    :comment
       
@@ -8,11 +8,11 @@ class CreateFeedbackReviews < ActiveRecord::Migration
       
       t.timestamps
     end
-    add_index :feedback_reviews, :review_id
-    add_index :feedback_reviews, :user_id
+    add_index :spree_feedback_reviews, :review_id
+    add_index :spree_feedback_reviews, :user_id
   end
 
   def self.down
-    drop_table :feedback_reviews
+    drop_table :spree_feedback_reviews
   end
 end
