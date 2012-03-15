@@ -4,12 +4,12 @@ class CreateFeedbackReviews < ActiveRecord::Migration
       t.integer :rating,    :default => 0
       t.text    :comment
       
-      t.references :user, :review
+      t.references :spree_user, :spree_review
       
       t.timestamps
     end
-    add_index :spree_feedback_reviews, :review_id
-    add_index :spree_feedback_reviews, :user_id
+    add_index :spree_feedback_reviews, :spree_review_id
+    add_index :spree_feedback_reviews, :spree_user_id
   end
 
   def self.down
