@@ -1,6 +1,6 @@
 module Spree
   class ReviewSweeper < ActionController::Caching::Sweeper
-    observe Review
+    observe Spree::Review
 
     def after_create(review)
       expire_cache_for(review)

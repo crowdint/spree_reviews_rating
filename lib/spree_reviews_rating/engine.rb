@@ -1,6 +1,6 @@
-module SpreeReviews
+module SpreeReviewsRating
   class Engine < Rails::Engine
-    engine_name 'spree_reviews'
+    engine_name 'spree_reviews_rating'
 
     config.autoload_paths += %W(#{config.root}/lib)
 
