@@ -1,13 +1,13 @@
 module Spree
   module Admin
-    class ReviewSettingsController < BaseController
+    class ReviewSettingsController < ResourceController
       
       def show
         @preferences = ['preview_size']
       end
 
       def edit
-        @preferences = [:include_unapproved_reviews, :feedback_rating, :show_email,
+        @preferences = [:include_unapproved_reviews, :show_email,
                         :require_login, :form_show, :preview_size]
       end
       

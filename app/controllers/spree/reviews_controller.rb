@@ -35,9 +35,13 @@ module Spree
 
       if @review.save
         flash[:notice] = t('review_successfully_submitted')
-        redirect_to (product_path(@product))
+        respond_to do |format|
+          format.js { render "success" }
+        end
       else
-        render :action => "new"
+        respond_to do |format|
+          format.js { render "error" }
+        end
       end
     end
 

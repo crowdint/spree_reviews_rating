@@ -12,6 +12,6 @@ $('.button-submit').click(function (event) {
 		url: $("#new_review").action,
 		data: ({authenticity_token: jQuery('meta[name="csrf-token"]').attr('content'), 'review[]': [$("#new_review").serializeArray()]}),
 		beforeSend: function(r){ $('#new_review').html('<p style="padding: 20px">Loading <img src="/assets/ratyloader.gif"/></p>');},
-		success: function(r){ $('#new_review').html(r);} });
-  });
+		success: function(r){ $('#new_review').html(r);}
+	});
 });

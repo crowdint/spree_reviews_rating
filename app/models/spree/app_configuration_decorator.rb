@@ -6,8 +6,6 @@ Spree::AppConfiguration.class_eval do
   preference :preview_size, :integer, :default => 3
   # show a reviewer's email address
   preference :show_email, :boolean, :default => false
-  # show helpfullness rating form elements
-  preference :feedback_rating, :boolean, :default => false
   # require login to post reviews
   preference :require_login, :boolean, :default => true
   # not view form immediatly

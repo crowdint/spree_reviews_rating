@@ -449,3 +449,12 @@
 	};
 
 })(jQuery);
+
+$(function() {
+	$(".review_submit").live("click", function() {
+		$(this).parents("form:first").submit();
+		$(this).parents("form:first").hide();
+		$("#new_review").removeClass().html("Loading Ajax...")
+		return false;
+	});
+});

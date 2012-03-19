@@ -6,9 +6,6 @@ module Spree
       can :create, Review do |review|
         user.has_role?(:user) || !Spree::Config[:require_login]
       end
-      can :create, FeedbackReview do |review|
-        user.has_role?(:user) || !Spree::Config[:require_login]
-      end
     end
     
   end

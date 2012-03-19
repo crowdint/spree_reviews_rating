@@ -1,10 +1,10 @@
 <div id="reviews">
 	<%#= render :partial => 'spree/shared/rating', :locals => {:product => @product} %>
-	<% for review in @product.reviews.approved.limit(3) %>
+	<% for review in @product.reviews.approved.page(params[:page]).per(Spree::Config[:preview_size]) %>
 		<%= render :partial => 'spree/shared/review', :locals => {:review => review} %>
 	<% end %>
 	<div class="pagination">
-		<div class="results">Mostra 1 su 1 di 1 (1 Pagina)</div>
+		<div class="results"><%= paginate @product.reviews.approved.page(params[:page]).per(Spree::Config[:preview_size]) %></div>
 	</div>
 	<% if !Spree::Config[:require_login] || current_user %>
 		<% if !Spree::Config[:form_show] %>

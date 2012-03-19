@@ -101,3 +101,10 @@
   border: none;
   margin: 1em 0;
 }
+
+.s_bgmsg_red {
+	color: #84290A;
+	background-color: #FFE7DF !important;
+	width: 320px;
+	padding: 5px;
+}

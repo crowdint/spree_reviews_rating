@@ -10,7 +10,6 @@
 		<th><%= Spree::Review.human_attribute_name(:user) %></th>
 		<th><%= Spree::Review.human_attribute_name(:rating) %></th>
 		<th><%= t('product') %></th>
-		<th><%= t('feedback') %></th>
 		<th><%= Spree::Review.human_attribute_name(:review) %></th>
 		<th></th>
 	</tr>
@@ -30,9 +29,6 @@
 			<% if review.product %>
 			<%= link_to review.product.name, product_path(review.product) %>
 			<% end %>
-		</td>
-		<td>
-			<%= link_to t('feedback'), admin_review_feedback_reviews_path(review) %>(<%= review.feedback_stars %>/<%= review.feedback_reviews.count %>)
 		</td>
 		<td width="30%">
 			<%= h review.review %>

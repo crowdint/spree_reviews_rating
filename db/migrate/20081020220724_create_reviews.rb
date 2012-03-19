@@ -6,7 +6,7 @@ class CreateReviews < ActiveRecord::Migration
       t.text :review
       t.boolean :approved, :default => false
       
-      t.references :spree_product, :spree_user
+      t.references :product, :user
       
       t.timestamps
     end
