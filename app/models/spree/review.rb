@@ -11,7 +11,7 @@ module Spree
     scope :approved, lambda {|*args| {:conditions => ["(? = ?) or (approved = ?)", Spree::Config[:include_unapproved_reviews], true, true ]}}
 
     scope :oldest_first, :order => "created_at asc"
-    scope :preview,      :limit => Spree::Config[:preview_size], :order => "created_at desc"
+    scope :preview, :limit => Spree::Config[:preview_size], :order => "created_at desc"
     attr_protected :user_id, :product_id, :location
     
   end

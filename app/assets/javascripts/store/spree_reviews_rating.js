@@ -452,9 +452,10 @@
 
 $(function() {
 	$(".review_submit").live("click", function() {
+		$(this).parents("form:first").validate();
 		$(this).parents("form:first").submit();
 		$(this).parents("form:first").hide();
-		$("#new_review").removeClass().html("Loading Ajax...")
+		$("#new_review").removeClass().html('<p style="padding: 20px">Loading <img src="/assets/ratyloader.gif"/></p>')
 		return false;
 	});
 });

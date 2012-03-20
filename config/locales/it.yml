@@ -18,14 +18,14 @@ it:
        default: "%a %d %b %Y, %H:%M:%S %z"
        short: "%d %b %H:%M"
        long: "%d %B %Y %H:%M"
-       review: "%a %d.%m.%Y"
+       review: "%d/%m/%Y"
        hours: "%H:%M"
        dow: "%A"
 
   approve: Approvare
-  on: su
+  on_stars: su
   stars: stelle!
-  Approved_reviews: Approvata
+  Approved_reviews: Approvate
   approved_text: Unlocked comments will be published within 1-2 business days.
   are_you_sure_review: Sei sicuro di eliminare la recensione ?
   average_customer_rating: Voto medio
@@ -46,22 +46,36 @@ it:
   leave_us_a_review: Lasciaci un commento e un voto
   original_version: 'Original version'
   out_of_5: "su 5"
-  rating: voto
+  created_at: Creata il
+  rating: Voto
   review: Recensione
   review_content: Contenuto
   review_guidelines: Review Guidelines
+  review_settings: Configurazioni Recensioni
+  manage_review_settings: Imposta le configurazioni per le recensioni
   review_management: Recensioni
-  review_management_description: Manage the user-submitted reviews
+  review_management_description: Amministra le recensioni inviate
   review_name: Your Name
   review_successfully_submitted: La recensione è stata inviata correttamente
-  review_not_submitted: Non è stato possibile salvare la recensione
+  review_not_submitted: Non è stato possibile salvare la recensione.
   review_title: Title
   spree_reviews:
-    review_settings: Impostazione recensioni
+    preview_size: Anteprima recensioni visualizzabili in pagina prodotto
+    include_unapproved_reviews: Includere le recensioni non approvate
+    show_email: Visualizza la mail dell'utente
+    require_login: Autenticazione necessaria
+    form_show: Visualizza direttamente il form di inserimento
+    on_stars: su
+    write: Scrivi
+    a_review: un Commento
+    name: Nome da visualizzare
+    review: Recensione
+    note_reviews: Note
+    continue: Invia
+    rating: Vota
+    note_review_description: Non inserire codice HTML!
+    review_settings: Configurazioni Recensioni
     manage_review_settings: Control the display of reviews
-    preview_size: Size of the review snippets
-    include_unapproved: Include unapproved reviews in listings
-    show_email: Mostra indirizzo email
     feedback_rating: Rate feedback
     require_login: Devi essere loggato per procedere
     your_name: Il tuo nome
@@ -75,7 +89,7 @@ it:
   terms_text: All opinions must comply with our terms and conditions
   terms_and_conditions: Terms & Conditions
   the_fine_print: The fine print
-  Unapproved_reviews: Non approvata
+  Unapproved_reviews: Non approvate
   voice:
     one: "1 voice"
     other: "%{count} voices"

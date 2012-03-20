@@ -21,8 +21,7 @@ module Spree
       authorize! :new, @review
       render :layout => false
     end
-
-    # save if all ok
+    
     def create
       #params[:review][:rating].sub!(/\s*stars/,'') unless params[:review][:rating].blank?
 

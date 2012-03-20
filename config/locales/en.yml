@@ -18,12 +18,12 @@ en:
       default: "%a %d %b %Y, %H:%M:%S %z"
       short: "%d %b %H:%M"
       long: "%d %B %Y %H:%M"
-      review: "%a %d.%m.%Y"
+      review: "%d/%m/%Y"
       hours: "%H:%M"
       dow: "%A"
 
   approve: Approve
-  on: on
+  on_stars: on
   stars: stars!
   Approved_reviews: Approved
   approved_text: Unlocked comments will be published within 1-2 business days.
@@ -45,9 +45,12 @@ en:
   leave_us_a_review: Leave us a review and a rating
   original_version: 'Original version'
   out_of_5: "out of 5"
+  created_at: Created at
   rating: rating
   reviews: Reviews
   review_content: Content
+  review_settings: Reviews Settings
+  manage_review_settings: Manage Reviews Settings
   review_guidelines: Review Guidelines
   review_management: Review Management
   review_management_description: Manage the user-submitted reviews
@@ -56,11 +59,22 @@ en:
   review_not_submitted: Review was not submitted
   review_title: Title
   spree_reviews:
+    preview_size: Size of the review snippets
+    include_unapproved_reviews: Include unapproved reviews in listings
+    show_email: Show user email
+    require_login: Authentication required
+    form_show: View form for insert review
+    on_stars: on
+    write: Write
+    a_review: a Review
+    name: Name
+    review: Review
+    note_reviews: Note
+    continue: Send
+    rating: Rate
+    note_review_description: Do not insert HTML code!
     review_settings: Review Settings
     manage_review_settings: Control the display of reviews
-    preview_size: Size of the review snippets
-    include_unapproved: Include unapproved reviews in listings
-    show_email: Show email addresses
     feedback_rating: Rate feedback
     require_login: Require user to be logged in
     your_name: Your name
