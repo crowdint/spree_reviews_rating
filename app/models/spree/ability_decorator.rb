@@ -1,4 +1,4 @@
-Spree::AbilityDecorator.class_eval do
+class Spree::AbilityDecorator
   include CanCan::Ability
 
   def initialize(user)
