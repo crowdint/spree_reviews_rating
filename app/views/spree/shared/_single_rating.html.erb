@@ -1,6 +1,6 @@
 <% if !review.rating.blank? %>
 <p class="s_rating s_rating_5"><span id="star_s<%= review.id.to_s %>" data-rating="<%= review.rating || 0 %>"></span></p>
-<span class="s_average"><%= review.rating.to_s + " " + t("spree_reviews.on_stars") + " 5 " + t(:stars) %></span>
+<span class="s_average"><%= review.rating.to_s + " " + "on" + " 5 " + t(:stars) %></span>
 <% end %>
 <script type="text/javascript">
 <!--//

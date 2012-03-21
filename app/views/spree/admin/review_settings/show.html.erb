@@ -33,6 +33,12 @@
 			<%= (Spree::Config[:form_show].blank?) ? t(:no) : t(:yes) %>
 		</td>
 	</tr>
+	<tr>
+		<th scope="row"><%= t("spree_reviews.enable_rating") %>:</th>
+		<td>
+			<%= (Spree::Config[:enable_rating].blank?) ? t(:no) : t(:yes) %>
+		</td>
+	</tr>	
 </table>
 
 <p><%= link_to_with_icon 'edit', t(:edit), edit_admin_review_settings_path, :id => 'admin_store_settings_link' %></p>

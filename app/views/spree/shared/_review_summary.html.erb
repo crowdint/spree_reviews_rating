@@ -1,5 +1,5 @@
 <div id="reviews">
-  <%= render :partial => 'spree/shared/rating', :locals => {:product => @product} %>
+  <% if Spree::Config[:enabled_rating] %><%= render :partial => 'spree/shared/rating', :locals => {:product => @product} %> <%-end%>
   <% for review in @product.reviews.approved.preview %>
     <%= render :partial => 'spree/shared/review', :locals => {:review => review} %>
   <% end %>

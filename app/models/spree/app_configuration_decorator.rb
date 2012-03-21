@@ -10,5 +10,7 @@ Spree::AppConfiguration.class_eval do
   preference :require_login, :boolean, :default => true
   # not view form immediatly
   preference :form_show, :boolean, :default => true
+  # enable disable rating sistem
+  preference :enable_rating, :boolean, :default => true
   
 end

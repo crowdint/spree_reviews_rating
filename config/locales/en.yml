@@ -36,6 +36,7 @@ en:
   edited_version: 'Edited version'
   editing_review_for: 'Editing review for'
   error_approve_review: Error approving review
+  enable_rating: "Enable rating"
   feedback: Feedback
   feedback_review_for: "Review: '%{review}'"
   for: for

@@ -10,13 +10,14 @@
 		<%= f.text_area :review, :wrap => "virtual", :rows => "8", :cols => "50" %>
 		<p class="s_legend">
 			<span style="color: #FF0000;"><%= t("spree_reviews.note_reviews") %></span> <%= t("spree_reviews.note_review_description") %></p>
-	</div>
-	
-	<div class="s_row_3 clearfix">
-		<%= content_tag(:label, t("spree_reviews.rating")) %>
-		<%= render :partial => "spree/reviews/stars" %>
-		<%= f.hidden_field :rating %>
-	</div>
+	</div>	
+	<% if Spree::Config[:enable_rating] %>
+		<div class="s_row_3 clearfix">
+			<%= content_tag(:label, t("spree_reviews.rating")) %>
+			<%= render :partial => "spree/reviews/stars" %>
+			<%= f.hidden_field :rating %>
+		</div>
+	<%-end%>
 	<%= link_to content_tag(:span, t("spree_reviews.continue"), :class => "s_text"), "javascript: void(0)", :class => "s_button_1 s_main_color_bgr review_submit" %>
 	<%#= button_tag t('submit_your_review'), :class => "button-submit" %>
 <% end %>

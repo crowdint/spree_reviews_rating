@@ -8,8 +8,10 @@
 	</p>
 	<div class="right">
       <div class="s_rating_holder">
-		<meta itemprop="reviewRating" content="<%= review.rating %>" />
-        <%= render :partial => "spree/shared/single_rating", :locals => {:review => review} %>
+      	<% if Spree::Config[:enable_rating] %>
+					<meta itemprop="reviewRating" content="<%= review.rating %>" />
+					<%= render :partial => "spree/shared/single_rating", :locals => {:review => review} %>
+				<%-end%>
       </div>
     </div>
 	<div class="clear"></div>
